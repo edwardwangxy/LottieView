@@ -86,10 +86,3 @@ public extension LottieView {
     }
 }
 
-struct LottieView_Previews: PreviewProvider {
-    static var previews: some View {
-        LottieView(name: "coffeeTime", play: .constant(true))
-            .frame(width: 500, height: 500, alignment: .center)
-    }
-}
-
