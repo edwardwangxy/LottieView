@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 import Lottie
 
 public struct LottieView: UIViewRepresentable {
@@ -26,7 +25,6 @@ public struct LottieView: UIViewRepresentable {
         let view = UIView()
 
         animationView.animation = Animation.named(name)
-        animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
 
