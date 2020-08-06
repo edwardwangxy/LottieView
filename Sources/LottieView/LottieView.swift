@@ -12,8 +12,9 @@ public struct LottieView: UIViewRepresentable {
     
     var name: String
     @Binding var play: Bool
-    var complete: (Bool) -> Void = {_ in}
     var animationView = AnimationView()
+    var complete: (Bool) -> Void = {_ in}
+    
 
     public init(name: String, play: Binding<Bool>, complete: @escaping (Bool) -> Void = {_ in}) {
         self.name = name
