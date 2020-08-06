@@ -12,6 +12,7 @@ public struct LottieView: UIViewRepresentable {
     
     var name: String
     @Binding var play: Bool
+    @Binding var active: Int
     var animationView = AnimationView()
     var complete: (Bool) -> Void = {_ in}
     
@@ -40,9 +41,6 @@ public struct LottieView: UIViewRepresentable {
     public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {
         if self.play {
             animationView.play { (result) in
-                if result {
-                    self.play = false
-                }
                 self.complete(result)
             }
         } else {
