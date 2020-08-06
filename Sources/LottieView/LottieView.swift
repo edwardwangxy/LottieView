@@ -17,9 +17,10 @@ public struct LottieView: UIViewRepresentable {
     var complete: (Bool) -> Void = {_ in}
     
 
-    public init(name: String, play: Binding<Bool>, complete: @escaping (Bool) -> Void = {_ in}) {
+    public init(name: String, play: Binding<Bool>, active: Binding<Int>, complete: @escaping (Bool) -> Void = {_ in}) {
         self.name = name
         self._play = play
+        self._active = active
         self.complete = complete
     }
     
