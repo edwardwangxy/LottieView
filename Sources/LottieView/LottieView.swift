@@ -13,7 +13,7 @@ public struct LottieView: UIViewRepresentable {
     var name: String
     @Binding var play: Bool
     @Binding var active: Int
-    var animationView = AnimationView()
+    var animationView = LottieAnimationView()
     var complete: (Bool) -> Void = {_ in}
     
 
